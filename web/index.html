@@ -9,8 +9,78 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.2.1.js"></script>
+        <!--1
+        <script>
+            
+            function saludar(){
+                //lo que esta dentro del () me dice que es lo que quiero que traiga
+                $("#data").html($("#nombre").val());
+            }     
+        </script>
+        -->
+        <!--2
+        <script>
+            $(document).ready(function(){
+                $("#boton").click(function(){
+                    $("#data").html($("#nombre").val());
+                });
+            });
+                
+        </script>
+        -->
+        <!--3
+        <script>
+          
+                
+        </script>
+        -->
+        <script>
+            $(document).ready(function () {
+
+                $("#boton").click(function () {
+                    $("span").html($("#nombre").val());
+                });
+                
+                /*$("#toggle").click(function () {
+                    $("span").toggle();
+                });*/
+                /*
+                $("#toggle").click(function () {
+                    $("span").fadeToggle("slow");
+                });*/
+                
+                $("#toggle").click(function () {
+                    $("span").fadeOut("slow");
+                });
+                
+            });
+
+        </script>
+
     </head>
     <body>
-        <div>TODO write content</div>
+        <!--1
+        nombre:<input type="text" id="nombre"/><br>
+        <input type="button" value="saludar" onclick="saludar()"/>
+        hola:<span id="data"></span>
+        -->
+        <!--2
+        nombre:<input type="text" id="nombre"/><br>
+        <input type="button" value="saludar" id="boton"/>
+        hola:<span id="data"></span>
+        -->
+        <!--3
+        nombre:<input type="text" id="nombre"/><br>
+        <input type="button" value="saludar" id="boton"/>
+        hola:<span id="data"></span><br>
+        <span id="data2"></span>
+        -->
+        nombre:<input type="text" id="nombre"/><br>
+        <input type="button" value="toggle" id="toggle" />
+        <input type="button" value="saludar" id="boton"/>
+        hola:<span id="data"></span><br>
+        <span id="data2"></span>
+
     </body>
 </html>
